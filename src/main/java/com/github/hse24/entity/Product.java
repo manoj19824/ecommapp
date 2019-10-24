@@ -2,6 +2,7 @@ package com.github.hse24.entity;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -28,10 +29,9 @@ public class Product extends AbstractEntity {
 	@ApiModelProperty(notes = "The name of the product")
 	private String name;
 
-	@ManyToMany()
+	@ManyToMany(cascade = CascadeType.REMOVE)
 	@ApiModelProperty(notes = "The product belongs to the categories")
 	@JoinTable(name = "product_category", joinColumns = @JoinColumn(name = "productid"), inverseJoinColumns = @JoinColumn(name = "categoryid"))
-	@JsonIgnore
 	private Set<Category> categories;
 
 	@Column(name = "price", nullable = false)

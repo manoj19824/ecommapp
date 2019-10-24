@@ -2,6 +2,7 @@ package com.github.hse24.entity;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -34,12 +35,11 @@ public class Category extends AbstractEntity {
     @ApiModelProperty(notes = "Parent category")
     private Category parent;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "categories")
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "categories",cascade = CascadeType.REMOVE)
     @ApiModelProperty(notes = "The List of product belongs to the category")
-    @JsonIgnore
     private Set<Product> products;
 
-    @OneToMany(mappedBy = "parent")
+    @OneToMany(mappedBy = "parent",cascade = CascadeType.REMOVE, orphanRemoval = true)
     @ApiModelProperty(notes = "The List of sub-category belongs to the category")
     private Set<Category> childCategories;
 

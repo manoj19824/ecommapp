@@ -93,8 +93,7 @@ public class ProductController {
 		})
     @ApiOperation(value = "Create product", response = Product.class)
     public ResponseEntity<?> createProduct(@RequestBody @Valid ProductDto request) {
-        // Gets the current logged-in User...
-    	logger.info("Inside createProduct for request {}",request);
+       	logger.info("Inside createProduct for request {}",request);
         // Creating a new product in the application...
         final Product product = productService.createProduct(request.getName(), request.getCurrency(), request.getPrice());
 

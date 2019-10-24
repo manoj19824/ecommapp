@@ -10,7 +10,6 @@ create table if not exists product (
     id bigint,
     name varchar(300) not null,
     price double not null,
-    userid bigint not null,
     primary key (id)
 );
 
