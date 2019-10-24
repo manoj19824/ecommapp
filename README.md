@@ -1,4 +1,4 @@
-# ecommapp
+# Products and categories REST API
 Problem Defination
 Develop a RESTFul API for managing products and categories and show product details in a
 REACT frontend
