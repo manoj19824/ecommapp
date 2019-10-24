@@ -23,7 +23,7 @@ public class CategoryResourceConverter extends ResourceAssemblerSupport<Category
 
     @Override
     protected CategoryResource instantiateResource(Category entity) {
-        return new CategoryResource(entity.getName());
+        return new CategoryResource(entity.getName(),entity.getId());
     }
 
     @Override

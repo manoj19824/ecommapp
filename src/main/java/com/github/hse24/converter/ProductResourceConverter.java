@@ -20,7 +20,7 @@ public class ProductResourceConverter extends ResourceAssemblerSupport<Product, 
 
 	@Override
 	protected ProductResource instantiateResource(Product entity) {
-		return new ProductResource(entity.getName(), Product.CURRENCY, entity.getPrice(),
+		return new ProductResource(entity.getId(),entity.getName(), Product.CURRENCY, entity.getPrice(),
 				!Collections.isEmpty(entity.getCategories())
 						? categoryResourceConverter.toResources(entity.getCategories())
 						: null);

@@ -5,12 +5,19 @@ import org.springframework.hateoas.ResourceSupport;
 public class CategoryResource extends ResourceSupport {
 
     private final String name;
+    private final Long categoryId;
 
-    public CategoryResource(String name) {
+    public CategoryResource(String name,Long categoryId) {
         this.name = name;
+        this.categoryId = categoryId;
     }
 
     public String getName() {
         return name;
     }
+
+	public Long getCategoryId() {
+		return categoryId;
+	}
+    
 }
