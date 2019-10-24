@@ -1,3 +1,6 @@
+drop table category;
+drop table product;
+drop table product_category;
 create table if not exists category (
     id bigint,
     name varchar(100) not null,
