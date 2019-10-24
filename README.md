@@ -1,23 +1,23 @@
 # ecommapp
-Problem Defination::
+Problem Defination
 Develop a RESTFul API for managing products and categories and show product details in a
 REACT frontend
 
-Tasks::
+Tasks
 Database schema: Create a schema to store product and categories. (Getting the full category path for
 the products might be a future requirement)
 CRUD operations: The client should perform CRUD operations on products and categories.
 Currency exchange: Add an ability to create products with price different from Euro. For this please
 integrate with an open currency exchange API (for example http://fixer.io)
 
-Assumptions ::
+Assumptions
 A product might be associated to multiple categories. For instance, an electric toothbrush may belong to both "Electronics" and "Beauty & Personal Care" categories.
 There are some fields that for simplicity we are not having in Product table such as description, features, price discount, refurbished, among others.
 Products . 
 Notes
 It's important to note that this is a HATEOAS-oriented REST API. That means you will find some URLs in the API response referencing to possible actions that can be performed on the resource. It's highly recommendable to take a look at the unit tests defined in com.github.damiox.ecommerce.api.controller to understand the expected API responses from a Development perspective.
 
-How to use this API::
+How to use this API
 A swagger UI interface is exposed to the end user using which you can do CURD operation on category and products.
 http://localhost:8080/swagger-ui.html#/
 
@@ -51,7 +51,7 @@ Link / Unlink products
 To link / unlink products with categories you can use the following URL: /categories/{categoryid}/products/{productid}
 To see the current products for a given category, you can do a GET on /categories/{parentid}/products. Note: the API will return also products that are being associated indirectly. That means if a Product is associated with Category B, which is in turn a child of Category A, then the product is directly associated with Category B, and indirectly associated with Category A. Accessing to /categories/A/products will return that product that is associated with Category A indirectly along with the products being associated directly with the Category A.
 
-Technologies Used ::
+Technologies Used 
 
 Java 8
 Spring Boot
