@@ -30,6 +30,7 @@ public class Product extends AbstractEntity {
 	private String name;
 
 	@ManyToMany(cascade = CascadeType.REMOVE)
+	@JsonIgnore
 	@ApiModelProperty(notes = "The product belongs to the categories")
 	@JoinTable(name = "product_category", joinColumns = @JoinColumn(name = "productid"), inverseJoinColumns = @JoinColumn(name = "categoryid"))
 	private Set<Category> categories;

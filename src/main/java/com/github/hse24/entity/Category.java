@@ -32,6 +32,7 @@ public class Category extends AbstractEntity {
 
     @ManyToOne
     @JoinColumn(name = "parentid")
+    @JsonIgnore
     @ApiModelProperty(notes = "Parent category")
     private Category parent;
 

@@ -6,7 +6,7 @@ public class CategoryResource extends ResourceSupport {
 
     private final String name;
     private final Long categoryId;
-
+  
     public CategoryResource(String name,Long categoryId) {
         this.name = name;
         this.categoryId = categoryId;
@@ -19,5 +19,4 @@ public class CategoryResource extends ResourceSupport {
 	public Long getCategoryId() {
 		return categoryId;
 	}
-    
 }
