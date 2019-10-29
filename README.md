@@ -6,6 +6,7 @@ REACT frontend
 Tasks
 Database schema: Create a schema to store product and categories. (Getting the full category path for
 the products might be a future requirement)
+
 CRUD operations: The client should perform CRUD operations on products and categories.
 Currency exchange: Add an ability to create products with price different from Euro. For this please
 integrate with an open currency exchange API (for example http://fixer.io)
@@ -53,14 +54,14 @@ To see the current products for a given category, you can do a GET on /categorie
 
 Technologies Used 
 
-Java 8
-Spring Boot
-Spring Web / MVC
-H2 (in-memory database)
-Spring Data (JPA)
-Hibernate (ORM)
-Logback
-Swagger
-Spring actuator
-Spring HATEOAS
-Spring Test
+Java 8 
+Spring Boot 
+Spring Web / MVC 
+H2 (in-memory database) 
+Spring Data (JPA) 
+Hibernate (ORM) 
+Logback 
+Swagger 
+Spring actuator 
+Spring HATEOAS 
+Spring Test 
